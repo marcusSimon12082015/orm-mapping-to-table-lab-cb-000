@@ -34,5 +34,6 @@ class Student
         obj.send("#{key}=",value)
     end
     obj.save
+    obj
   end
 end
