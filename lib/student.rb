@@ -33,7 +33,6 @@ class Student
     attributes.each do |key,value|
         obj.send("#{key}=",value)
     end
-    binding.pry
-    obj
+    obj.save
   end
 end
