@@ -29,10 +29,11 @@ class Student
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
   end
   def self.create(attributes)
-    attributes.each do |key,value|
-      binding.pry
-      send("#{key}",value)
+    obj = Student.new
+    attributes.each do |key,value|    
+        obj.send("#{key}=",value)
     end
-
+    binding.pry
+    obj
   end
 end
