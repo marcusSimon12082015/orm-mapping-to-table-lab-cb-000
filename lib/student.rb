@@ -29,6 +29,8 @@ class Student
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
   end
   def create(attributes)
-    attributes.each do |key,value| {send("#{key}",value)}
+    attributes.each do |key,value| 
+      send("#{key}",value)
+    end
   end
 end
