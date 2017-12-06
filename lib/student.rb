@@ -30,8 +30,8 @@ class Student
   end
   def self.create(attributes)
     obj = Student.new
+    binding.pry
     attributes.each do |key,value|
-        binding.pry
         obj.send("#{key}=",value)
     end
     obj
