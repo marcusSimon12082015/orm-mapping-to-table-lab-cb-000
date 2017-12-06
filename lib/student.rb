@@ -33,6 +33,6 @@ class Student
       binding.pry
       send("#{key}",value)
     end
-    
+
   end
 end
